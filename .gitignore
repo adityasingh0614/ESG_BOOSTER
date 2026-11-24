@@ -1,0 +1,12 @@
+# Root screenshot captures
+/*.png
+!assets/*.png
+
+# Temp text dumps
+/spec_text_dump.txt
+
+# OS and Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
