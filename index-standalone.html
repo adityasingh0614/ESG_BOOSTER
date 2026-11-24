@@ -7,11 +7,12 @@
 <meta name="description" content="ESG Booster Workshop 2027 – From Compliance to Sustainable Leadership. A one-day workshop on BRSR, ESG assurance and sustainability practice, jointly organised by GGSIPU and EHS Guru. Saturday 30 January 2027, GGSIPU Dwarka, New Delhi. Register by 15 January 2027.">
 <meta name="keywords" content="BRSR, ESG assurance, ESG workshop 2027, sustainability reporting, GGSIPU, EHS Guru, Business Responsibility and Sustainability Report, ESG compliance, ESG training New Delhi">
 <meta name="author" content="Council of EHS &amp; ESG Excellence | GGSIPU × EHS Guru Sustainable Solutions Pvt. Ltd.">
-<meta name="server-time" content="2026-11-24T04:43:26Z">
+<meta name="server-time" content="2026-11-24T06:12:40Z">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="canonical" href="https://www.ehsguru.com">
-<meta name="color-scheme" content="light">
-<meta name="theme-color" content="#08465A">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#08465A">
 <meta property="og:locale" content="en_IN">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Council of EHS &amp; ESG Excellence | EHS Guru">
@@ -170,10 +171,24 @@
   --paper:#F6F9F6; --surface:#FFFFFF; --mist:#E4EFEA; --ink:#12262D; --muted:#4D6168;
   --teal:#0B5D75; --teal-deep:#08465A; --leaf:#178A4A; --sun:#FFD84D; --sun-ink:#3A2E00;
   --line:#D3E2DB; --on-teal:#FFFFFF; --ring:rgba(11,93,117,.16); --err:#B42318;
-  color-scheme:light;
+  color-scheme:light dark;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
   padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0D1A1E; --surface:#13252B; --mist:#183139; --ink:#E8F1EE; --muted:#A3B8B5;
+    --teal:#3FA9C7; --teal-deep:#0B5D75; --leaf:#46B97A; --sun:#FFD84D; --sun-ink:#2B2200;
+    --line:#24414A; --on-teal:#06222B; --ring:rgba(63,169,199,.22); --err:#FF8A80;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0D1A1E; --surface:#13252B; --mist:#183139; --ink:#E8F1EE; --muted:#A3B8B5;
+  --teal:#3FA9C7; --teal-deep:#0B5D75; --leaf:#46B97A; --sun:#FFD84D; --sun-ink:#2B2200;
+  --line:#24414A; --on-teal:#06222B; --ring:rgba(63,169,199,.22); --err:#FF8A80;
+  color-scheme:dark;
 }
 *,*::before,*::after{box-sizing:inherit}
 html,body{overflow-x:hidden;max-width:100vw;width:100%}
@@ -243,18 +258,18 @@ nav a:hover{color:var(--ink)}
 .hero .btn-ghost{color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.45)}
 .hero .btn-ghost:hover{box-shadow:inset 0 0 0 2px #fff}
 
-.ticket{position:relative;background:#fff;color:#12262D;border-radius:18px;display:grid;grid-template-columns:118px 1fr;overflow:hidden;box-shadow:0 24px 50px rgba(0,0,0,.28);max-width:100%}
-.stub{background:var(--sun);color:#3A2E00;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px 8px;text-align:center;border-right:2px dashed rgba(58,46,0,.35)}
+.ticket{position:relative;background:var(--surface);color:var(--ink);border-radius:18px;display:grid;grid-template-columns:118px 1fr;overflow:hidden;box-shadow:0 24px 50px rgba(0,0,0,.28);max-width:100%}
+.stub{background:var(--sun);color:var(--sun-ink);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px 8px;text-align:center;border-right:2px dashed rgba(58,46,0,.35)}
 .stub .d{font:800 76px/.85 "Barlow Condensed",sans-serif}
 .stub .m{font:700 22px/1 "Barlow Condensed",sans-serif;letter-spacing:.06em;margin-top:6px}
 .stub .y{font-weight:600;font-size:15px;margin-top:2px}
 .tk-body{padding:22px 22px 20px;display:flex;flex-direction:column;justify-content:center}
-.tk-body h3{font-size:24px;font-weight:700;line-height:1.2;color:#12262D}
+.tk-body h3{font-size:24px;font-weight:700;line-height:1.2;color:var(--ink)}
 .count{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0 14px}
 .count div{background:var(--mist);border-radius:10px;text-align:center;padding:8px 4px;min-width:0}
 .count b{display:block;font:700 30px/1 "Barlow Condensed",sans-serif;color:var(--teal)}
 .count span{font-size:12px;color:var(--muted);display:block;margin-top:2px}
-.tk-note{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 6px}
+.tk-note{font-size:14px;font-weight:600;color:var(--leaf);margin:0 0 6px}
 .tk-body p.tk-desc{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
 .closed .count{display:none}
 
