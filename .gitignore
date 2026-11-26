@@ -4,6 +4,8 @@
 
 # Temp text dumps
 /spec_text_dump.txt
+/new_doc_dump.txt
+/exact_doc_elements.json
 
 # OS and Editor files
 .DS_Store
