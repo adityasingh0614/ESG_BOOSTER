@@ -337,14 +337,14 @@ nav a:hover{color:var(--teal)}
 /* 2. Hero Section - Reference HTML Structure with Timer & Background Image */
 .hero{
   position:relative;overflow:hidden;
-  background:linear-gradient(145deg, #071E28 0%, #0B2B38 52%, #0E3646 100%);
+  background:#071E28;
   color:#fff;padding:64px 0 76px;border-bottom:1px solid rgba(255,255,255,.08);
 }
 .hero-bg{
   position:absolute;top:0;left:0;right:0;bottom:0;
-  background-image:url('assets/glimpse-panel.webp');
-  background-size:cover;background-position:center 30%;
-  opacity:0.18;pointer-events:none;mix-blend-mode:luminosity;
+  background-image:linear-gradient(to right, #071E28 0%, #071E28 32%, rgba(7,30,40,0.85) 52%, rgba(11,43,56,0.50) 75%, rgba(7,30,40,0.80) 100%), url('assets/glimpse-panel.webp');
+  background-size:cover;background-position:center 36%;
+  filter:blur(2px);transform:scale(1.03);pointer-events:none;
 }
 .rings{
   position:absolute;right:-140px;top:50%;transform:translateY(-50%);
@@ -437,6 +437,10 @@ nav a:hover{color:var(--teal)}
 .closed .count{display:none}
 
 @media (max-width:960px){
+  .hero-bg{
+    background-image:linear-gradient(to bottom, #071E28 0%, #071E28 42%, rgba(7,30,40,0.85) 65%, rgba(11,43,56,0.55) 100%), url('assets/glimpse-panel.webp');
+    background-position:center 30%;
+  }
   .hero-grid{grid-template-columns:1fr;gap:36px}
   .ticket{max-width:100%;width:100%}
   .rings{display:none}
@@ -846,7 +850,7 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:40px 0 1
     <circle cx="380" cy="380" r="370" fill="none" stroke="rgba(255,255,255,.10)" stroke-width="2"/>
     <circle cx="380" cy="380" r="280" fill="none" stroke="rgba(255,255,255,.14)" stroke-width="2"/>
     <circle cx="380" cy="380" r="190" fill="none" stroke="rgba(255,216,77,.55)" stroke-width="3"/>
-    <circle cx="380" cy="380" r="100" fill="rgba(23,138,74,.35)"/>
+    <circle cx="380" cy="380" r="100" fill="rgba(23,138,74,.10)" stroke="rgba(23,138,74,.50)" stroke-width="2"/>
   </svg>
   <div class="wrap hero-grid">
     <div class="hero-content">
