@@ -340,12 +340,7 @@ nav a:hover{color:var(--teal)}
   background:#071E28;
   color:#fff;padding:64px 0 76px;border-bottom:1px solid rgba(255,255,255,.08);
 }
-.hero-bg{
-  position:absolute;top:0;left:0;right:0;bottom:0;
-  background-image:linear-gradient(to right, #071E28 0%, #071E28 32%, rgba(7,30,40,0.85) 52%, rgba(11,43,56,0.50) 75%, rgba(7,30,40,0.80) 100%), url('assets/glimpse-panel.webp');
-  background-size:cover;background-position:center 36%;
-  filter:blur(2px);transform:scale(1.03);pointer-events:none;
-}
+.hero-bg{display:none}
 .rings{
   position:absolute;right:-140px;top:50%;transform:translateY(-50%);
   width:720px;height:720px;pointer-events:none;opacity:.85;
@@ -437,10 +432,7 @@ nav a:hover{color:var(--teal)}
 .closed .count{display:none}
 
 @media (max-width:960px){
-  .hero-bg{
-    background-image:linear-gradient(to bottom, #071E28 0%, #071E28 42%, rgba(7,30,40,0.85) 65%, rgba(11,43,56,0.55) 100%), url('assets/glimpse-panel.webp');
-    background-position:center 30%;
-  }
+  .hero-bg{display:none}
   .hero-grid{grid-template-columns:1fr;gap:36px}
   .ticket{max-width:100%;width:100%}
   .rings{display:none}
@@ -1154,7 +1146,7 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:40px 0 1
         <img src="assets/glimpse-networking.webp" alt="Networking during a break at GGSIPU" width="600" height="380" loading="lazy">
       </div>
       <div class="glimpse-card">
-        <img src="assets/glimpse-mou.webp" alt="Speaker presentation from an earlier edition" width="600" height="380" loading="lazy">
+        <img src="assets/glimpse-mou.webp" alt="Dignitaries and keynote speakers session at GGSIPU" width="600" height="380" loading="lazy">
       </div>
     </div>
   </div>
