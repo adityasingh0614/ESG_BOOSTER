@@ -518,18 +518,70 @@ nav a:hover{color:var(--teal)}
 }
 .spk-more h3{color:var(--teal);font-size:22px}
 
-/* 9. Glimpses from past editions */
+/* 9. Glimpses from past editions - Clean Photo Gallery */
 .sec-glimpses{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.glimpse-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:30px}
-.glimpse-card{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--paper)}
-.glimpse-card img{width:100%;height:190px;object-fit:cover;display:block}
-.glimpse-cap{padding:12px 16px;font-size:14px;font-weight:600;color:var(--ink)}
+.glimpse-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:30px}
+.glimpse-card{
+  border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--paper);
+  aspect-ratio:16/10;box-shadow:0 4px 14px rgba(0,0,0,.04);transition:transform .2s ease,box-shadow .2s ease;
+}
+.glimpse-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.08)}
+.glimpse-card img{width:100%;height:100%;object-fit:cover;display:block}
 
 /* 10. Participant Voices & Organisations */
-.sec-voices{background:var(--paper)}
-.voice-box{
-  background:var(--surface);border:1px dashed var(--line);border-radius:16px;
-  padding:28px;margin-top:20px;text-align:center;color:var(--muted);font-size:15px;
+.sec-voices{background:var(--paper);padding:88px 0}
+.testimonials-block{margin-top:28px}
+.voices-subtitle{
+  font-family:"Barlow Condensed",sans-serif;font-size:24px;font-weight:700;
+  letter-spacing:.02em;color:var(--teal);margin-bottom:20px;text-transform:uppercase;
+}
+.testimonials-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:24px;
+}
+.testimonial-card{
+  background:var(--surface);border:1px solid var(--line);border-radius:16px;
+  padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between;
+  gap:18px;box-shadow:0 4px 16px rgba(0,0,0,.03);transition:transform .2s ease,border-color .2s ease;
+}
+.testimonial-card:hover{transform:translateY(-2px);border-color:var(--teal)}
+.quote-icon{color:var(--teal);opacity:.4;margin-bottom:-6px}
+.quote-text{
+  font-size:15.5px;line-height:1.6;color:var(--ink);font-style:italic;margin:0;
+}
+.quote-author{
+  display:flex;align-items:center;justify-content:flex-end;
+  border-top:1px solid var(--line);padding-top:14px;
+}
+.author-badge{
+  font-size:12.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--muted);background:var(--mist);padding:4px 12px;border-radius:999px;
+}
+
+.orgs-block{margin-top:54px}
+.org-logos-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;
+  align-items:center;margin-top:20px;
+}
+.org-logo-card{
+  background:#ffffff;border:1px solid var(--line);border-radius:12px;
+  padding:14px 18px;display:flex;align-items:center;justify-content:center;
+  min-height:72px;box-shadow:0 2px 8px rgba(0,0,0,.02);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.org-logo-card:hover{
+  transform:translateY(-2px);border-color:var(--teal);box-shadow:0 6px 18px rgba(0,0,0,.06);
+}
+.org-logo-card img{
+  max-width:100%;max-height:42px;width:auto;height:auto;object-fit:contain;
+  filter:grayscale(15%) contrast(105%);transition:filter .2s ease;
+}
+.org-logo-card:hover img{filter:none}
+
+@media (max-width:860px){
+  .testimonials-grid{grid-template-columns:1fr;gap:18px}
+  .org-logos-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+  .org-logo-card{padding:10px 14px;min-height:64px}
+  .org-logo-card img{max-height:36px}
 }
 
 /* 11. Registration fees */
@@ -808,9 +860,6 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:40px 0 1
     <div class="hero-showcase">
       <div class="showcase-media">
         <img src="assets/glimpse-panel.webp" alt="ESG Booster Workshop Panel Discussion at GGSIPU" width="600" height="375" loading="eager">
-        <div class="showcase-badge">
-          GGSIPU Campus Gathering · <span>3rd Edition</span>
-        </div>
       </div>
       <div class="showcase-briefing">
         <div class="showcase-title">
@@ -1051,20 +1100,16 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:40px 0 1
     <p class="lede">The earlier ESG Booster gatherings brought together students, practitioners, academics and industry professionals at GGSIPU. Here are a few moments from the previous editions.</p>
     <div class="glimpse-grid">
       <div class="glimpse-card">
-        <img src="assets/glimpse-panel.webp" alt="Panel discussion from an earlier edition" width="300" height="190" loading="lazy">
-        <div class="glimpse-cap">Panel discussion</div>
+        <img src="assets/glimpse-panel.webp" alt="Panel discussion from an earlier ESG Booster edition" width="600" height="380" loading="lazy">
       </div>
       <div class="glimpse-card">
-        <img src="assets/glimpse-audience.webp" alt="Audience and participant interaction" width="300" height="190" loading="lazy">
-        <div class="glimpse-cap">Audience and participant interaction</div>
+        <img src="assets/glimpse-audience.webp" alt="Audience and participant interaction at GGSIPU" width="600" height="380" loading="lazy">
       </div>
       <div class="glimpse-card">
-        <img src="assets/glimpse-networking.webp" alt="Networking during a break" width="300" height="190" loading="lazy">
-        <div class="glimpse-cap">Networking during a break</div>
+        <img src="assets/glimpse-networking.webp" alt="Networking during a break at GGSIPU" width="600" height="380" loading="lazy">
       </div>
       <div class="glimpse-card">
-        <img src="assets/glimpse-mou.webp" alt="Speaker and MoU presentation" width="300" height="190" loading="lazy">
-        <div class="glimpse-cap">Speaker &amp; presentation</div>
+        <img src="assets/glimpse-mou.webp" alt="Speaker presentation from an earlier edition" width="600" height="380" loading="lazy">
       </div>
     </div>
   </div>
@@ -1074,20 +1119,91 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:40px 0 1
 <section class="sec-voices">
   <div class="wrap">
     <h2>Participant voices and organisations represented</h2>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:20px;">
-      <div>
-        <h3 style="font-size:20px;color:var(--ink);margin-bottom:8px;">What participants say</h3>
-        <div class="voice-box">
-          Participant testimonials from previous ESG Booster editions will be published upon verified approval.
+    
+    <div class="testimonials-block">
+      <h3 class="voices-subtitle">What participants say</h3>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="quote-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+          </div>
+          <p class="quote-text">“The topics and assignments were very relevant and always updated with current market trends. Learning with participants from different industries added great value. I also appreciate the support from the faculty and backend team.”</p>
+          <div class="quote-author">
+            <div class="author-badge">Batch 2 Participant</div>
+          </div>
         </div>
-      </div>
-      <div>
-        <h3 style="font-size:20px;color:var(--ink);margin-bottom:8px;">Organisations and institutions represented</h3>
-        <div class="voice-box">
-          Logos of attending companies, colleges and institutions from previous editions are verified before display.
+
+        <div class="testimonial-card">
+          <div class="quote-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+          </div>
+          <p class="quote-text">“I&#39;m so glad, I stumbled upon this ESG Course. Its been a truly enriching experience and I&#39;m thankful for the opportunity to learn.”</p>
+          <div class="quote-author">
+            <div class="author-badge">Batch 1 Participant</div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+          </div>
+          <p class="quote-text">“I was already involved in regulatory work, and this course helped me understand the other ESG aspects clearly. Many topics connected well with my day-today activities. Overall, the sessions were very insightful.”</p>
+          <div class="quote-author">
+            <div class="author-badge">Batch 2 Participant</div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+          </div>
+          <p class="quote-text">“EHS Guru provided clarity on ESG concepts, with a keen emphsis on legislation aspects. The interactive sessions were fantastic &amp; I eagerly anticipate future learning opportunities.”</p>
+          <div class="quote-author">
+            <div class="author-badge">Batch 1 Participant</div>
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="orgs-block">
+      <h3 class="voices-subtitle">Organisations and institutions represented</h3>
+      <div class="org-logos-grid">
+        <div class="org-logo-card" title="Adani">
+          <img src="assets/companies/adani.webp" alt="Adani" width="140" height="40" loading="lazy">
+        </div>
+        <div class="org-logo-card" title="Battery Smart">
+          <img src="assets/companies/battery-smart.webp" alt="Battery Smart" width="140" height="40" loading="lazy">
+        </div>
+        <div class="org-logo-card" title="CBRE">
+          <img src="assets/companies/cbre.webp" alt="CBRE" width="140" height="40" loading="lazy">
+        </div>
+        <div class="org-logo-card" title="HDFC Life">
+          <img src="assets/companies/hdfc-life.webp" alt="HDFC Life" width="140" height="40" loading="lazy">
+        </div>
+        <div class="org-logo-card" title="Hero MotoCorp">
+          <img src="assets/companies/hero-motocorp.webp" alt="Hero MotoCorp" width="140" height="40" loading="lazy">
+        </div>
+        <div class="org-logo-card" title="Indian Oil">
+          <img src="assets/companies/indian-oil.webp" alt="Indian Oil" width="140" height="40" loading="lazy">
+        </div>
+        <div class="org-logo-card" title="Infosys">
+          <img src="assets/companies/infosys.webp" alt="Infosys" width="140" height="40" loading="lazy">
+        </div>
+        <div class="org-logo-card" title="Jindal Stainless">
+          <img src="assets/companies/jindal-stainless.webp" alt="Jindal Stainless" width="140" height="40" loading="lazy">
+        </div>
+        <div class="org-logo-card" title="Reliance Industries">
+          <img src="assets/companies/reliance-industries.webp" alt="Reliance Industries" width="140" height="40" loading="lazy">
+        </div>
+        <div class="org-logo-card" title="Shapoorji Pallonji">
+          <img src="assets/companies/shapoorji-pallonji.webp" alt="Shapoorji Pallonji" width="140" height="40" loading="lazy">
+        </div>
+        <div class="org-logo-card" title="UPES">
+          <img src="assets/companies/upes.webp" alt="UPES" width="140" height="40" loading="lazy">
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
