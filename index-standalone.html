@@ -1017,6 +1017,36 @@ footer{background:var(--paper);border-top:1px solid var(--line);color:var(--mute
 .rings{top:46% !important;opacity:.7 !important;}
 .hero .cta-row{margin-top:28px !important;margin-bottom:0 !important;}
 
+
+/* Mobile Responsive Fixes (No Overflow, Single-Line Badges, Stacked Course & Form Cards) */
+html,body{overflow-x:clip;max-width:100%;}
+.hero-photo-cap{gap:12px !important;}
+.hero-photo-cap .cap-badge{white-space:nowrap !important;flex-shrink:0 !important;}
+.course-info h3{color:var(--ink) !important;}
+.course-box{flex-wrap:wrap;}
+.form-2col{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media (max-width:760px){
+  .hero-grid{grid-template-columns:minmax(0,1fr) !important;gap:28px !important;}
+  .hero-photo-cap{padding:12px 14px !important;gap:10px !important;}
+  .hero-photo-cap .cap-title{font-size:13.5px !important;line-height:1.3 !important;}
+  .hero-photo-cap .cap-badge{font-size:11px !important;padding:4px 10px !important;}
+  .course-box{
+    flex-direction:column !important;align-items:stretch !important;
+    padding:24px 20px !important;gap:18px !important;
+  }
+  .course-box .btn,.course-box .btn-ghost{
+    white-space:normal !important;width:100% !important;
+    text-align:center !important;justify-content:center !important;
+    line-height:1.3 !important;padding:14px 18px !important;
+  }
+  .reg-grid,.form-grid,.form-row,.row-2,.form-2col{grid-template-columns:1fr !important;}
+  .reg-card{padding:24px 18px !important;}
+  .reg-card input,.reg-card select{min-width:0 !important;width:100% !important;box-sizing:border-box !important;}
+  .venue-card{padding:26px 20px !important;gap:20px !important;}
+  .venue-card .cta-row{flex-direction:column !important;width:100% !important;}
+  .venue-card .cta-row .btn{width:100% !important;justify-content:center !important;}
+}
+
 </style>
 </head>
 <body>
@@ -1514,7 +1544,7 @@ footer{background:var(--paper);border-top:1px solid var(--line);color:var(--mute
           <input type="text" id="reg_name" class="form-input" placeholder="Your full name" required>
         </div>
 
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="form-2col">
           <div class="form-group">
             <label class="form-label" for="reg_org">Organisation or college <span class="req">*</span></label>
             <input type="text" id="reg_org" class="form-input" placeholder="Company or College name" required>
@@ -1525,7 +1555,7 @@ footer{background:var(--paper);border-top:1px solid var(--line);color:var(--mute
           </div>
         </div>
 
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="form-2col">
           <div class="form-group">
             <label class="form-label" for="reg_phone">Mobile number <span class="req">*</span></label>
             <input type="tel" id="reg_phone" class="form-input" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
