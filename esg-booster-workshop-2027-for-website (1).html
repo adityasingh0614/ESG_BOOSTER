@@ -9,9 +9,8 @@
 <meta name="author" content="Council of EHS &amp; ESG Excellence | GGSIPU × EHS Guru Sustainable Solutions Pvt. Ltd.">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="canonical" href="https://www.ehsguru.com/esg-booster-workshop-2027/">
-<meta name="color-scheme" content="light dark">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#FFFFFF">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#08465A">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#FFFFFF">
 
 <!-- Open Graph / WhatsApp / LinkedIn Preview -->
 <meta property="og:locale" content="en_IN">
@@ -194,63 +193,29 @@
 
 <style>
 :root {
-  --paper:#F6F9F6;
-  --surface:#FFFFFF;
-  --mist:#E4EFEA;
-  --ink:#12262D;
-  --muted:#4D6168;
-  --teal:#0B5D75;
-  --teal-deep:#08465A;
-  --leaf:#178A4A;
-  --sun:#FFD84D;
-  --sun-ink:#3A2E00;
-  --line:#D3E2DB;
-  --on-teal:#FFFFFF;
-  --ring:rgba(11,93,117,.16);
-  --err:#B42318;
-  color-scheme:light dark;
-  box-sizing:border-box;
-  padding-top:env(safe-area-inset-top,0px);
-  padding-bottom:env(safe-area-inset-bottom,0px);
-}
-
-@media (prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) {
-    --paper:#0D1A1E;
-    --surface:#13252B;
-    --mist:#183139;
-    --ink:#E8F1EE;
-    --muted:#A3B8B5;
-    --teal:#3FA9C7;
-    --teal-deep:#0B5D75;
-    --leaf:#46B97A;
-    --sun:#FFD84D;
-    --sun-ink:#2B2200;
-    --line:#24414A;
-    --on-teal:#06222B;
-    --ring:rgba(63,169,199,.22);
-    --err:#FF8A80;
-    color-scheme:dark;
-  }
-}
-
-:root[data-theme="dark"] {
   --paper:#0D1A1E;
   --surface:#13252B;
   --mist:#183139;
   --ink:#E8F1EE;
   --muted:#A3B8B5;
   --teal:#3FA9C7;
-  --teal-deep:#0B5D75;
+  --teal-deep:#08465A;
   --leaf:#46B97A;
   --sun:#FFD84D;
   --sun-ink:#2B2200;
   --line:#24414A;
-  --on-teal:#06222B;
+  --on-teal:#FFFFFF;
   --ring:rgba(63,169,199,.22);
   --err:#FF8A80;
   color-scheme:dark;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
 }
+
+
+
+
 
 *,*::before,*::after{box-sizing:inherit}
 html,body{overflow-x:hidden;max-width:100vw;width:100%}
@@ -267,9 +232,16 @@ body{
 section{padding:88px 0;content-visibility:auto;contain-intrinsic-size:1px 600px}
 #top{content-visibility:visible;contain-intrinsic-size:none}
 
-h1,h2,h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;letter-spacing:-.01em;margin:0}
+h1,h2,h3,h4{
+  font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  line-height:1.02;margin:0;letter-spacing:.005em;
+  overflow-wrap:break-word;word-break:break-word;
+}
 h1{font-size:clamp(46px,7vw,92px);line-height:.95;text-transform:uppercase;font-weight:800}
-h2{font-size:clamp(32px,4.5vw,48px);line-height:1.05;margin-bottom:12px}
+h2{
+  font-size:clamp(32px,4.8vw,52px);font-weight:700;
+  color:var(--ink);margin-bottom:12px;
+}
 h3{font-size:24px;line-height:1.15}
 .lede{font-size:18px;color:var(--muted);max-width:64ch;margin:0 0 28px}
 
@@ -337,8 +309,8 @@ nav a:hover{color:var(--teal)}
 /* 2. Hero Section - Reference HTML Structure with Timer & Background Image */
 .hero{
   position:relative;overflow:hidden;
-  background:#071E28;
-  color:#fff;padding:64px 0 76px;border-bottom:1px solid rgba(255,255,255,.08);
+  background:var(--teal-deep);
+  color:#fff;padding:72px 0 84px;
 }
 .hero-bg{display:none}
 .rings{
@@ -353,24 +325,45 @@ nav a:hover{color:var(--teal)}
 .hero-content{display:flex;flex-direction:column}
 .presents{
   display:inline-flex;align-items:center;gap:8px;
-  color:#BFE3D2;font-size:14.5px;font-weight:600;letter-spacing:.04em;
-  text-transform:uppercase;margin:0 0 14px;
+  color:#BFE3D2;font-size:15px;font-weight:500;
+  margin:0 0 16px;letter-spacing:.01em;
 }
 .presents .kdot{width:6px;height:6px;border-radius:50%;background:var(--sun)}
 .hero h1{
-  font-family:"Barlow",sans-serif;font-size:clamp(40px,4.6vw,56px);
-  font-weight:800;line-height:1.06;letter-spacing:-.02em;color:#fff;margin:0 0 10px;
+  font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  font-size:clamp(44px,7.2vw,92px);
+  font-weight:800;
+  text-transform:uppercase;
+  line-height:.92;
+  letter-spacing:-.01em;
+  color:#fff;
+  margin:0 0 10px;
 }
-.hero h1 .edition{color:var(--sun)}
+.hero h1 .edition{
+  color:var(--sun);
+  font-size:.42em;
+  font-weight:700;
+  letter-spacing:.02em;
+  display:block;
+  margin-top:8px;
+  text-transform:none;
+}
 .hero-tagline{
-  font-size:20px;font-weight:600;color:var(--sun);line-height:1.3;margin:0 0 14px;
+  font-family:"Barlow Condensed",sans-serif;
+  font-size:clamp(20px,2.4vw,26px);
+  font-weight:600;
+  color:var(--sun);
+  margin:18px 0 10px;
+  letter-spacing:.01em;
 }
 .hero-lede{
-  font-size:16px;line-height:1.55;color:rgba(255,255,255,.92);margin:0 0 12px;max-width:58ch;
+  font-size:17.5px;line-height:1.6;color:#D3E8E3;
+  margin:0 0 14px;max-width:54ch;
 }
 .hero-joint{
-  font-size:13.5px;line-height:1.45;color:rgba(255,255,255,.78);margin:0 0 20px;max-width:56ch;
   display:flex;align-items:flex-start;gap:8px;
+  font-size:14px;line-height:1.5;color:#BFE3D2;
+  margin:0 0 20px;max-width:58ch;
 }
 .hero-joint svg{flex-shrink:0;margin-top:2px;color:var(--sun)}
 .hero-facts{
@@ -392,19 +385,37 @@ nav a:hover{color:var(--teal)}
 
 /* Hero Why Section Inside Left Column */
 .hero-why-box{
-  background:rgba(255,255,255,.05);backdrop-filter:blur(10px);
-  border:1px solid rgba(255,255,255,.12);border-radius:14px;
-  padding:18px 20px;
+  background:rgba(0,0,0,.22);
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:14px;padding:22px 24px;
+  margin-top:28px;box-shadow:0 8px 24px rgba(0,0,0,.15);
 }
 .hero-why-title{
-  font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
-  color:var(--sun);margin-bottom:10px;display:flex;align-items:center;gap:8px;
+  font-family:"Barlow Condensed",sans-serif;font-size:19px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.04em;color:var(--sun) !important;
+  margin-bottom:12px;display:flex;align-items:center;gap:8px;
+}
+.hero-why-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px;}
+.hero-why-list li{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:15px;line-height:1.45;color:#E4EFEA;
+}
+.hero-why-list li svg{
+  width:16px;height:16px;flex-shrink:0;color:var(--leaf);margin-top:3px;
+}
+.hero-why-title{
+  font-family:"Barlow Condensed",sans-serif;font-size:18px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.04em;color:var(--sun);
+  margin-bottom:12px;display:flex;align-items:center;gap:8px;
 }
 .hero-why-list{list-style:none;padding:0;margin:0;display:grid;gap:8px}
 .hero-why-list li{
-  display:flex;align-items:flex-start;gap:10px;font-size:13.5px;line-height:1.45;color:rgba(255,255,255,.9);
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:15px;line-height:1.45;color:#E4EFEA;
 }
-.hero-why-list li svg{width:15px;height:15px;color:var(--sun);flex-shrink:0;margin-top:2px}
+.hero-why-list li svg{
+  width:16px;height:16px;flex-shrink:0;color:var(--leaf);margin-top:3px;
+}
 
 /* Reference Ticket & Countdown Timer */
 .ticket{
@@ -438,8 +449,24 @@ nav a:hover{color:var(--teal)}
   .rings{display:none}
 }
 @media (max-width:560px){
-  .hero h1{font-size:clamp(32px,8vw,44px)}
-  .hero-tagline{font-size:17px}
+  .hero h1{
+  font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  font-size:clamp(44px,7.2vw,92px);
+  font-weight:800;
+  text-transform:uppercase;
+  line-height:.92;
+  letter-spacing:-.01em;
+  color:#fff;
+  margin:0 0 10px;
+}
+  .hero-tagline{
+  font-family:"Barlow Condensed",sans-serif;
+  font-size:clamp(20px,2.4vw,26px);
+  font-weight:600;
+  color:var(--sun);
+  margin:18px 0 10px;
+  letter-spacing:.01em;
+}
   .cta-row{flex-direction:column;width:100%;gap:10px}
   .cta-row .btn{width:100%;text-align:center;justify-content:center}
   .ticket{grid-template-columns:92px 1fr}
@@ -459,6 +486,7 @@ nav a:hover{color:var(--teal)}
 }
 
 /* 3. Event Highlights */
+.meet-box h3{color:var(--ink) !important;}
 .highlights{background:var(--surface);padding:44px 0;border-bottom:1px solid var(--line)}
 .hl-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .hl-cell{padding:0 16px;border-left:1px solid var(--line)}
@@ -471,10 +499,13 @@ nav a:hover{color:var(--teal)}
 .about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
 .about-text p{font-size:17px;line-height:1.65;color:var(--ink);margin:0 0 18px}
 .meet-box{
-  background:var(--surface);border-radius:18px;padding:28px;
-  border:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.04);
+  background:var(--mist);border-radius:18px;padding:28px;
+  border:1px solid var(--line);box-shadow:0 8px 24px rgba(0,0,0,.03);
 }
-.meet-box h3{font-size:22px;color:var(--teal);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.meet-box h3{
+  font-family:"Barlow Condensed",sans-serif;font-size:26px;font-weight:700;
+  color:var(--teal-deep);margin-bottom:16px;display:flex;align-items:center;gap:10px;
+}
 .meet-box ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
 .meet-box li{display:flex;align-items:flex-start;gap:10px;font-size:15px;line-height:1.45;color:var(--ink)}
 .meet-box li svg{width:18px;height:18px;flex-shrink:0;color:var(--leaf);margin-top:2px}
@@ -614,17 +645,24 @@ nav a:hover{color:var(--teal)}
 .fee-amount{font:800 48px/1 "Barlow Condensed",sans-serif;color:var(--ink);margin:10px 0 4px}
 .fee-calc{font-size:14px;color:var(--muted);margin-bottom:20px}
 .fee-inc-box{
-  margin-top:32px;background:var(--surface);border:1px solid var(--line);
-  border-radius:14px;padding:22px;font-size:15px;line-height:1.5;color:var(--ink);
+  margin-top:32px;background:var(--teal-deep);border-radius:18px;
+  padding:26px 30px;font-size:16px;line-height:1.55;color:#ffffff;
+  box-shadow:0 12px 30px rgba(8,70,90,.15);
 }
-.fee-inc-box b{color:var(--leaf)}
+.fee-inc-box b,
+.fee-inc-box strong{
+  color:var(--sun) !important;
+  font-weight:700;
+}
+.fee-inc-box b{color:var(--sun);}
 .fee-note{font-size:13px;color:var(--muted);margin-top:14px;line-height:1.4}
 
 /* 13. Registration and payment (Connected Form) */
 .sec-register{background:var(--paper)}
 .reg-container{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:start}
 .reg-card{
-  background:var(--surface);border:1px solid var(--line);border-radius:18px;
+  background:var(--surface);border:1px solid var(--line);
+  border-top:6px solid var(--leaf);border-radius:18px;
   padding:34px;box-shadow:0 12px 35px rgba(0,0,0,.04);
 }
 .form-group{margin-bottom:18px}
@@ -696,17 +734,47 @@ details[open] summary.faq-q::after{content:'−'}
   background:var(--teal-deep);color:#fff;border-radius:22px;
   padding:44px;display:grid;grid-template-columns:1.3fr .7fr;gap:32px;align-items:center;
 }
-.venue-card h2{color:#fff;font-size:clamp(28px,3.5vw,42px);margin-bottom:8px}
+.venue-card h2{color:#ffffff !important;font-size:clamp(28px,4vw,44px);margin:0 0 10px;font-family:"Barlow Condensed",sans-serif;font-weight:700;}
 .venue-card p{color:#E4EFEA;font-size:16px;line-height:1.5;margin:0 0 4px}
 .venue-cta{display:flex;justify-content:flex-end;gap:14px;flex-wrap:wrap}
 
 /* 17. Related Learning Opportunity */
-.sec-course{background:var(--surface);border-top:1px solid var(--line);padding:44px 0}
-.course-box{
-  background:var(--mist);border:1px solid var(--line);border-radius:16px;
-  padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+.sec-course{
+  background:var(--mist);border-top:1px solid var(--line);padding:52px 0;
 }
-.course-info h3{font-size:22px;color:var(--ink);margin-bottom:6px}
+.course-box .btn,
+.course-box .btn-ghost{
+  background:var(--teal) !important;
+  color:#ffffff !important;
+  border:none !important;
+  box-shadow:none !important;
+  padding:14px 26px !important;
+  font-weight:700 !important;
+  border-radius:999px !important;
+  white-space:nowrap !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:8px !important;
+  text-decoration:none !important;
+  transition:all .15s ease !important;
+}
+.course-box .btn:hover,
+.course-box .btn-ghost:hover{
+  background:var(--teal-deep) !important;
+  color:#ffffff !important;
+  transform:translateY(-1px) !important;
+  box-shadow:0 6px 18px rgba(8,70,90,.25) !important;
+}
+.course-box{
+  background:var(--surface);border:1px solid var(--line);
+  border-left:6px solid var(--teal);border-radius:18px;
+  padding:34px 38px;display:flex;align-items:center;justify-content:space-between;gap:28px;
+  box-shadow:0 8px 25px rgba(0,0,0,.04);
+}
+.course-info h3{
+  font-family:"Barlow Condensed",sans-serif;font-size:26px;font-weight:700;
+  color:var(--teal-deep);margin:0 0 8px;
+}
 .course-info p{margin:0;font-size:15px;color:var(--muted);max-width:70ch}
 
 /* 18. Footer */
@@ -770,10 +838,21 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:40px 0 1
 }
 
 @media (max-width:640px){
-  .hero{padding:32px 0 40px}
+  .hero{
+  position:relative;overflow:hidden;
+  background:var(--teal-deep);
+  color:#fff;padding:72px 0 84px;
+}
   .hero-kicker-pill{font-size:11.5px;padding:6px 12px;line-height:1.4;white-space:normal;text-align:left;border-radius:10px}
   .hero-title{font-size:32px;line-height:1.15;margin-bottom:10px}
-  .hero-tagline{font-size:17px;line-height:1.35;margin-bottom:14px}
+  .hero-tagline{
+  font-family:"Barlow Condensed",sans-serif;
+  font-size:clamp(20px,2.4vw,26px);
+  font-weight:600;
+  color:var(--sun);
+  margin:18px 0 10px;
+  letter-spacing:.01em;
+}
   .hero-meta-bar{flex-direction:column;gap:8px;margin-bottom:20px}
   .meta-chip{width:100%;font-size:13px;padding:8px 12px;box-sizing:border-box}
   .hero-cta{flex-direction:column;width:100%;gap:10px}
@@ -803,6 +882,141 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:40px 0 1
   .hl-cell:last-child{border-bottom:none}
   .cat-selector{grid-template-columns:1fr}
 }
+
+/* Hero Photo Card (Section 2 of Brief) */
+.hero-media{display:flex;flex-direction:column;gap:16px;justify-content:center}
+.hero-photo-card{
+  border-radius:18px;overflow:hidden;box-shadow:0 24px 50px rgba(0,0,0,.35);
+  border:1px solid rgba(255,255,255,.18);background:#ffffff;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.hero-photo-card:hover{transform:translateY(-2px);box-shadow:0 28px 60px rgba(0,0,0,.42)}
+.hero-photo-card img{width:100%;height:auto;display:block;aspect-ratio:16/10;object-fit:cover}
+.hero-photo-cap{
+  padding:14px 18px;background:#ffffff;color:#12262D;
+  display:flex;justify-content:space-between;align-items:center;border-top:1px solid #D3E2DB;
+}
+.hero-photo-cap .cap-title{font-size:14px;font-weight:700;color:#0B5D75;letter-spacing:.01em}
+.hero-photo-cap .cap-badge{
+  font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+  padding:3px 10px;border-radius:999px;background:#E4EFEA;color:#178A4A;
+}
+
+
+
+
+
+/* Exact Template Component Contrast */
+header{background:var(--paper);border-bottom:1px solid var(--line);}
+header .logos{background:#ffffff;border-radius:10px;padding:6px 12px;}
+header .joint-subline{color:var(--muted);}
+.hero{background:var(--teal-deep);color:#ffffff;}
+.hero h1,.hero h2,.hero-why-title{color:#ffffff;}
+.hero h1 .edition,.hero-tagline,.hero-why-title{color:var(--sun);}
+.hero-photo-cap{background:#ffffff;}
+.hero-photo-cap .cap-title{color:#08465A;}
+.hero-photo-cap .cap-badge{background:#E4EFEA;color:#178A4A;}
+.meet-box h3{color:var(--ink) !important;}
+.highlights{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-includes{background:var(--paper);}
+.sec-glimpses{background:var(--surface);}
+.sec-fees{background:var(--surface);}
+.fee-inc-box{background:var(--teal-deep);color:#ffffff;border:1px solid var(--line);}
+.fee-inc-box b,.fee-inc-box strong{color:var(--sun);}
+.venue-card{background:var(--teal-deep);color:#ffffff;border:1px solid var(--line);}
+.venue-card h2{color:#ffffff !important;}
+.venue-card p{color:#D3E8E3;}
+.venue-card .btn-ghost{color:#ffffff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.45);}
+.course-box .btn,.course-box .btn-ghost{background:var(--sun);color:var(--sun-ink);border:none;box-shadow:none;}
+.cat-opt{background:var(--paper);border:1px solid var(--line);color:var(--ink);}
+.cat-opt.selected{background:var(--mist);border:2px solid var(--sun);}
+.reg-card input,.reg-card select{background:var(--paper);color:var(--ink);border:1px solid var(--line);}
+.checkout-box{background:var(--paper);border:1px solid var(--line);color:var(--ink);}
+.checkout-row,.checkout-total{color:var(--ink);}
+footer{background:var(--paper);border-top:1px solid var(--line);color:var(--muted);}
+
+
+/* Exact Client Reference Hero Color (#005d84) & Typography */
+.hero{
+  background:#005d84 !important;
+  color:#ffffff !important;
+  padding:72px 0 84px !important;
+}
+.hero h1{
+  font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif !important;
+  font-size:clamp(50px,7.4vw,106px) !important;
+  font-weight:800 !important;
+  text-transform:uppercase !important;
+  line-height:.9 !important;
+  letter-spacing:.005em !important;
+  color:#ffffff !important;
+  margin:0 !important;
+}
+.hero h1 .edition{
+  display:block !important;
+  font-size:.42em !important;
+  font-weight:600 !important;
+  letter-spacing:.02em !important;
+  color:var(--sun) !important;
+  margin-top:10px !important;
+  text-transform:none !important;
+}
+.hero-tagline{
+  font-family:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif !important;
+  font-size:clamp(20px,2.4vw,26px) !important;
+  font-weight:500 !important;
+  color:#ffffff !important;
+  margin:22px 0 0 !important;
+  max-width:30ch !important;
+  letter-spacing:normal !important;
+}
+.hero-lede{
+  font-family:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif !important;
+  font-size:17px !important;
+  line-height:1.6 !important;
+  color:#D3E8E3 !important;
+  max-width:52ch !important;
+  margin:14px 0 0 !important;
+}
+.hero-joint{
+  font-family:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif !important;
+  color:#BFE3D2 !important;
+  margin:14px 0 0 !important;
+}
+.hero-facts{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  gap:10px 22px !important;
+  margin:26px 0 0 !important;
+  padding:0 !important;
+  list-style:none !important;
+  font-weight:600 !important;
+  color:#ffffff !important;
+}
+.hero-facts li{
+  display:flex !important;
+  align-items:center !important;
+  gap:8px !important;
+  background:transparent !important;
+  border:none !important;
+  padding:0 !important;
+  border-radius:0 !important;
+  color:#ffffff !important;
+  font-size:16px !important;
+}
+
+
+/* Hero UI/UX Design Refinements (Layout & Hierarchy Only) */
+.hero{padding:56px 0 68px !important;}
+.hero-grid{align-items:center !important;}
+.hero-media{gap:18px !important;}
+.hero-why-box{margin-top:0 !important;}
+.hero-photo-cap{background:#13252B !important;border-top:1px solid rgba(255,255,255,.1) !important;}
+.hero-photo-cap .cap-title{color:#E8F1EE !important;}
+.hero-photo-cap .cap-badge{background:#183139 !important;color:#3FA9C7 !important;border:1px solid rgba(63,169,199,.3) !important;}
+.rings{top:46% !important;opacity:.7 !important;}
+.hero .cta-row{margin-top:28px !important;margin-bottom:0 !important;}
+
 </style>
 </head>
 <body>
@@ -811,10 +1025,10 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:40px 0 1
 <header>
   <div class="hdr">
     <div class="brand-block">
-      <a href="#top" class="logos" aria-label="GGSIPU and EHS Guru, back to top">
-        <img class="ggsipu" src="assets/logo-ggsipu.webp" alt="Guru Gobind Singh Indraprastha University" width="145" height="32">
-        <div class="sep" aria-hidden="true"></div>
+      <a href="#top" class="logos" aria-label="EHS Guru and GGSIPU, back to top">
         <img class="ehs" src="assets/logo-ehs-guru.webp" alt="EHS Guru Sustainable Solutions" width="57" height="32">
+        <div class="sep" aria-hidden="true"></div>
+        <img class="ggsipu" src="assets/logo-ggsipu.webp" alt="Guru Gobind Singh Indraprastha University" width="145" height="32">
       </a>
       <div class="joint-subline">Jointly organised by Guru Gobind Singh Indraprastha University and EHS Guru Sustainable Solutions Pvt. Ltd.</div>
     </div>
@@ -878,6 +1092,18 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:40px 0 1
         <a href="#agenda" class="btn btn-ghost">See the Agenda</a>
       </div>
 
+      
+    </div>
+
+        <!-- Authentic Photograph Card from earlier edition (Section 2 of Brief) -->
+    <div class="hero-media">
+      <div class="hero-photo-card">
+        <img src="assets/glimpse-panel.webp" alt="ESG Booster Workshop earlier edition gathering at GGSIPU" width="600" height="380" loading="eager" fetchpriority="high">
+        <div class="hero-photo-cap">
+          <div class="cap-title">ESG Booster Gathering · GGSIPU Campus</div>
+          <span class="cap-badge">Past Edition</span>
+        </div>
+      </div>
       <div class="hero-why-box">
         <div class="hero-why-title">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 8 12 12 16 16 12 12 8"></polygon></svg>
@@ -901,26 +1127,6 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:40px 0 1
             <span>Exchange ideas and explore career, business and collaboration opportunities.</span>
           </li>
         </ul>
-      </div>
-    </div>
-
-    <!-- Ticket Card with Server-Synced Timer -->
-    <div class="ticket" id="ticket" aria-live="polite">
-      <div class="stub" aria-hidden="true">
-        <span class="d">30</span>
-        <span class="m">JAN</span>
-        <span class="y">2027</span>
-      </div>
-      <div class="tk-body">
-        <h3 id="tk-title">Registrations close in</h3>
-        <div class="count" id="count">
-          <div><b id="cd-d">–</b><span>days</span></div>
-          <div><b id="cd-h">–</b><span>hours</span></div>
-          <div><b id="cd-m">–</b><span>minutes</span></div>
-          <div><b id="cd-s">–</b><span>seconds</span></div>
-        </div>
-        <p class="tk-note" id="tk-note">Last date to register: 15 January 2027</p>
-        <p class="tk-desc">Seats are limited. Confirmation and joining instructions are shared with registered participants.</p>
       </div>
     </div>
   </div>
@@ -1143,7 +1349,7 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:40px 0 1
         <img src="assets/glimpse-audience.webp" alt="Audience and participant interaction at GGSIPU" width="600" height="380" loading="lazy">
       </div>
       <div class="glimpse-card">
-        <img src="assets/glimpse-networking.webp" alt="Networking during a break at GGSIPU" width="600" height="380" loading="lazy">
+        <img src="assets/glimpse-networking.webp" alt="Certificate presentation on stage at ESG Booster Workshop, GGSIPU" width="600" height="380" loading="lazy">
       </div>
       <div class="glimpse-card">
         <img src="assets/glimpse-mou.webp" alt="Dignitaries and keynote speakers session at GGSIPU" width="600" height="380" loading="lazy">
@@ -1456,7 +1662,7 @@ footer{background:var(--paper);border-top:1px solid var(--line);padding:40px 0 1
         <h3>Looking to explore ESG in greater depth?</h3>
         <p>For participants interested in structured, in-depth learning beyond the workshop, EHS Guru also offers the ESG Compliance Lead Certification Course. The course covers ESG regulations, reporting frameworks, due diligence and sustainability implementation in greater detail.</p>
       </div>
-      <a href="https://www.ehsguru.com/esg-compliance-lead-certification-course" target="_blank" rel="noopener" class="btn btn-ghost">Explore the ESG Compliance Lead Course →</a>
+      <a href="assets/ESG%20COMPLIANCE%20LEAD_Brochure.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Explore the ESG Compliance Lead Course →</a>
     </div>
   </div>
 </section>
